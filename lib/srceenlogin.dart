@@ -9,33 +9,45 @@ class Screenlogin extends StatelessWidget {
         body: ScreenTypeLayout(
       mobile: Row(
         children: [
-          Container(
-              //height: 1188,
-              width: 586,
-              color: Colors.blueGrey,
-              child: content()),
-          Container(
-            //height: 1188,
-            width: 854,
-            color: Colors.blueGrey.shade900,
-          )
+          BG_content(),
         ],
       ),
       desktop: Row(
         children: [
-          Container(
-              //height: 1188,
-              width: 586,
-              color: Colors.blueGrey,
-              child: content()),
-          Container(
-            //height: 1188,
-            width: 854,
-            color: Colors.blueGrey.shade900,
-          )
+          BG_content(),
+          picture(),
         ],
       ),
     ));
+  }
+}
+
+class picture extends StatelessWidget {
+  const picture({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        //height: 1188,
+        //width: 854,
+        color: Colors.orange,
+      ),
+    );
+  }
+}
+
+class BG_content extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        //height: 1188,
+        width: 586,
+        color: Colors.blueGrey,
+        child: content(),
+      ),
+    );
   }
 }
 
@@ -81,13 +93,18 @@ class login extends StatelessWidget {
   }
 }
 
-class gap extends StatelessWidget {
+class gap extends StatefulWidget {
+  @override
+  _gapState createState() => _gapState();
+}
+
+class _gapState extends State<gap> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Expanded(
       child: Container(
-        height: 20,
-        //color: Colors.blue,
+        height: 61,
+        color: Colors.blue,
       ),
     );
   }
@@ -105,12 +122,17 @@ class logo extends StatelessWidget {
   }
 }
 
-class gap2 extends StatelessWidget {
+class gap2 extends StatefulWidget {
+  @override
+  _gap2State createState() => _gap2State();
+}
+
+class _gap2State extends State<gap2> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Expanded(
       child: Container(
-        height: 142,
+        height: 125,
         color: Colors.blue,
       ),
     );
@@ -123,7 +145,7 @@ class mail extends StatelessWidget {
     return Center(
       child: Container(
         height: 60,
-        //color: Colors.red,
+        color: Colors.red,
         child: mail_data(),
       ),
     );
@@ -148,7 +170,7 @@ class pass extends StatelessWidget {
     return Center(
       child: Container(
         height: 60,
-        //color: Colors.red,
+        color: Colors.red,
         child: pass_data(),
       ),
     );
@@ -179,10 +201,17 @@ class sinein extends StatelessWidget {
   }
 }
 
-class Last_bot extends StatelessWidget {
+class Last_bot extends StatefulWidget {
+  Last_bot({Key key}) : super(key: key);
+
+  @override
+  _Last_botState createState() => _Last_botState();
+}
+
+class _Last_botState extends State<Last_bot> {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Expanded(
       child: Container(
         height: 260,
         color: Colors.red,
