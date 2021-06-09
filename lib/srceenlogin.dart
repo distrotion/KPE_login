@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:login_mindfit/sing_in_eq/eq_login.dart';
+import 'package:login_mindfit/sing_in_eq/in_gap.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 class Screenlogin extends StatelessWidget {
@@ -44,7 +45,7 @@ class BG_content extends StatelessWidget {
       child: Container(
         //height: 1188,
         width: 586,
-        color: Colors.blueGrey,
+        //color: Colors.blueGrey,
         child: content(),
       ),
     );
@@ -68,7 +69,7 @@ class content extends StatelessWidget {
 class login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Expanded(
       child: Container(
           //height: 812,
           //color: Colors.green,
@@ -102,10 +103,14 @@ class _gapState extends State<gap> {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Container(
-        height: 61,
-        color: Colors.blue,
+      child: SizedBox(
+        height: 127,
       ),
+      // Container(
+      //   height: 127,
+      //   color: Colors.blue,
+      //   child: top_body(),
+      // ),
     );
   }
 }
@@ -116,7 +121,8 @@ class logo extends StatelessWidget {
     return Center(
       child: Container(
         height: 54,
-        color: Colors.yellow,
+        //color: Colors.yellow,
+        child: Logo_DATA(),
       ),
     );
   }
@@ -133,7 +139,7 @@ class _gap2State extends State<gap2> {
     return Expanded(
       child: Container(
         height: 125,
-        color: Colors.blue,
+        //color: Colors.blue,
       ),
     );
   }
@@ -145,14 +151,19 @@ class mail extends StatelessWidget {
     return Center(
       child: Container(
         height: 60,
-        color: Colors.red,
+        //color: Colors.red,
         child: mail_data(),
       ),
     );
   }
 }
 
-class gap3 extends StatelessWidget {
+class gap3 extends StatefulWidget {
+  @override
+  _gap3State createState() => _gap3State();
+}
+
+class _gap3State extends State<gap3> {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -170,7 +181,7 @@ class pass extends StatelessWidget {
     return Center(
       child: Container(
         height: 60,
-        color: Colors.red,
+        //color: Colors.red,
         child: pass_data(),
       ),
     );
@@ -183,7 +194,7 @@ class remem extends StatelessWidget {
     return Center(
       child: Container(
         height: 58,
-        color: Colors.black54,
+        //color: Colors.black54,
       ),
     );
   }
@@ -195,15 +206,14 @@ class sinein extends StatelessWidget {
     return Center(
       child: Container(
         height: 40,
-        color: Colors.pink,
+        //color: Colors.pink,
+        child: Button_Signin(),
       ),
     );
   }
 }
 
 class Last_bot extends StatefulWidget {
-  Last_bot({Key key}) : super(key: key);
-
   @override
   _Last_botState createState() => _Last_botState();
 }
@@ -214,8 +224,17 @@ class _Last_botState extends State<Last_bot> {
     return Expanded(
       child: Container(
         height: 260,
-        color: Colors.red,
+        //color: Colors.blue,
+        child: Last_bot00(),
       ),
     );
   }
 }
+
+
+
+            // Orbox(),
+            // Gap5(),
+            // LogoContent(),
+            // Gap5(),
+            // MessengeConten(),
