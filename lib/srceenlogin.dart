@@ -24,8 +24,6 @@ class Screenlogin extends StatelessWidget {
 }
 
 class picture extends StatelessWidget {
-  const picture({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -45,7 +43,7 @@ class BG_content extends StatelessWidget {
       child: Container(
         //height: 1188,
         width: 586,
-        //color: Colors.blueGrey,
+        color: Colors.white,
         child: content(),
       ),
     );
